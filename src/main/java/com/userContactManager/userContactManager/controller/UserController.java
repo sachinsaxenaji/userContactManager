@@ -24,6 +24,9 @@ public class UserController {
     @Autowired
     UserService userService;
 
+
+
+
     @ModelAttribute
     public void addCommonData(Model model, Principal principal)
     {
@@ -44,6 +47,8 @@ public class UserController {
     	model.addAttribute("title", "This is user dashboard");
     	return "normal/user_dashboard";
     }
+
+//    This end point to add contact
 
     @RequestMapping("/add_contact")
     public String openAddContactForm(Model model)
