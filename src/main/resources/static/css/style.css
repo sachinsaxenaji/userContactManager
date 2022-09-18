@@ -1,0 +1,66 @@
+
+.maincontent
+{
+ clear:both; 
+}
+.sidebar{
+  width: 20%;
+  background: white;
+  height: 100%;
+  size: fixed;
+  padding-top: 45px;
+  float:left
+}
+.mcontent{
+  
+  float:right;
+  width: 80%
+}
+
+.sidebar a{
+  display: block;
+  width: 100%;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: gray;
+} 
+.sidebar .divider{
+  height: .5px;
+  width: 100px;
+  background: #e2e2e2;
+  margin-top: 20px;
+}
+.sidebar a:hover{
+  background: #e2e2e2;
+}
+
+.img-thumbnail
+{
+  height: 35px;
+ width: 35px;
+ object-fit: cover;
+
+}
+#search-containe
+{
+  position: relative;
+}
+#search-result
+{
+  position: absolute;
+  background: white;
+  width: 100%
+  padding: 10px;
+  border: 1px solid-grey;
+  display: none;
+}
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}

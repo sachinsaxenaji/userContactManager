@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" xmlns:th = "https://www.thymeleaf.org/" th:replace = "normal\base::Layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title th:text ="${title}">Base HTML</title>
+
+</head>
+<body>
+
+
+<section>
+
+    <div class="mycard mr-3 ml-3">
+
+        <div class="mycontainer text-center">
+            
+            <img th:src="@{'/img/'+${contact.image}}" class="img-thumbnail-p" alt="..." style="height: 200px; width: 200px"> 
+            <h3 class="mt-3"><samp th:text = "${contact.name}"></h3>
+
+            <table class="table">
+                <thead>
+                <tr>
+
+                    <th scope="col">#ID </th>
+                <th scope="col">SCRM <samp th:text = "${'USER'+contact.cId}"></samp></th>
+              
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+
+                <th scope = "row"> Phone</th>
+                <td ><samp th:text = "${contact.phone}"></samp> </td>
+            </tr>
+             <tr>
+
+                <th scope = "row"> Contact</th>
+                <td ><samp th:text = "${contact.email}"></samp> </td>
+            </tr>
+              <tr>
+
+                <th scope = "row"> Work</th>
+                <td ><samp th:text = "${contact.work}"></samp> </td>
+            </tr>
+            </tbody>
+             </table>
+
+             <div class="mydiscription mt-3">
+                 <th:block th:utext = "${contact.description}"></th:block>
+                 
+             </div>
+
+
+             <div class="mycontainer mt-3">
+                 
+                 <button class="btn btn-danger btn-block">Delete</button>
+                  <button class="btn btn-primary btn-block">Update</button>
+             </div>
+
+              
+           
+        </div>
+        
+
+
+    </div>
+
+
+
+
+
+</section>
+
+</body>
+</html>
+
